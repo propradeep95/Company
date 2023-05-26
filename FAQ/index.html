@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Hind", sans-serif;
+            background: #fff;
+            color: #4d5974;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 4rem;
+            width: 48rem;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: black;
+        }
+
+        .accordion .accordion-item {
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #0e0e0f;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .accordion button:hover,
+        .accordion button:focus {
+            cursor: pointer;
+            color: #03b5d2;
+        }
+
+        .accordion button:hover::after,
+        .accordion button:focus::after {
+            cursor: pointer;
+            color: #03b5d2;
+            border: 1px solid #03b5d2;
+        }
+
+        .accordion button .accordion-title {
+            padding: 1em 1em 1em 0;
+        }
+
+        .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 25px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+        }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+        .accordion button[aria-expanded=true] {
+            color: #03b5d2;
+        }
+
+        .accordion button[aria-expanded=true] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded=true]+.accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 5px 6px;
+        }
+    </style>
+
+    <title>FAQ</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>DELIVERY & FAQ</h1>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What methods of
+                        payment do you accept?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>We accept credit and debit cards, UPI, and other payment methods listed on our website.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How long till my
+                        order is delivered?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Following receipt of your payment, we aim to ship your order within xxx business days. However,
+                        delivery times might change based on where you are. During busy times, please allow up to xxx
+                        business days for dispatch.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Do you supply
+                        pan-India shipping?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Yes, we ship across India.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How do you handle
+                        returns?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>You have xxx days from the date of receipt to return the item for a refund or exchange if you are
+                        unhappy with your purchase for any reason. The goods being returned must be intact, unused, and
+                        in its original packaging. Products that are returned won't have their shipping costs
+                        reimbursed.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How can I tell which
+                        hair accessory is best for me?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>To assist you in making an informed decision, we give extensive product descriptions and
+                        photographs. If you have any queries about a product, please email us at (support@xyz.com) and
+                        we would be pleased to help.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Can I change or
+                        cancel my order?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>You have xxx hours after making your order to cancel it. To request a cancellation, please
+                        contact us at (support@xyz.com).</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What if I receive a
+                        defective or distorted product?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Within xxx hours of receiving the product, please email us at (support@xyz.com) if it is damaged
+                        or defective. Depending on your preference, we will set up a replacement or refund.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Can my order be
+                        tracked?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Yes, as soon as your order has been sent out, you will receive an email with a tracking number.
+                        Use this tracking number to check the status of your order on our website.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What if I still have
+                        queries or worries?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Please email us at (support@xyz.com) if you have any additional inquiries or issues, and we would
+                        be happy to help.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

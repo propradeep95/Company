@@ -1,0 +1,19 @@
+
+.navbar > div{
+    font-size: 20px;
+   
+}
+
+.nav-link{
+    color: black;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 800px;
+    margin-top: 10px;
+    
+}
